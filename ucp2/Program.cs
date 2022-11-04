@@ -4,10 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ucp2
+namespace exercise2
 {
-    internal class Program
+    class Program
     {
+        int[] IP = new int[87];
+        int[] sorted = new int[87];
+        int n;
+
         static void Main(string[] args)
         {
         }
