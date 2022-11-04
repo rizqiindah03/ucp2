@@ -12,8 +12,21 @@ namespace exercise2
         int[] sorted = new int[87];
         int n;
 
-        static void Main(string[] args)
+        public void input()
         {
+            while (true)
+            {
+                Console.Write("Enter the number of elements in the array ");
+                string s = Console.ReadLine();
+                n = Int32.Parse(s);
+                if ((n > 0) && (n <= 87))
+                    break;
+                else
+                    Console.WriteLine("\n Array should have minimum 1 and maximum 87 elements. \n ");
+            }
         }
+
+        
+       
     }
 }
