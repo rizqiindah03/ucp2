@@ -24,9 +24,55 @@ namespace exercise2
                 else
                     Console.WriteLine("\n Array should have minimum 1 and maximum 87 elements. \n ");
             }
+            Console.WriteLine("\n-------------------");
+            Console.WriteLine(" Enter array elements");
+            Console.WriteLine("---------------------");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("<" + (i + 1) + ">");
+                string s1 = Console.ReadLine();
+                IP[1] = Int32.Parse(s1);
+            } 
         }
+        public void swap (int x, int y)
+        {
+            int temp;
+            temp = IP[x];
+            IP[x] = IP[y];
+            IP[y] = temp;
+        }
+        //mergesort 
+        void merge(int low, int mid, int high)
+        {
+            int i, RI, k;
+            i = low;
+            RI = mid + 1;
+            k = low;
+            while ((i <=mid) && (RI <=high))
+            {
+                if (IP[i] <= IP[RI])
+                {
+                    sorted[k++] = IP[i++]; 
+                }
+                else
+                {
+                    sorted[k++] = IP[RI++];
+                }
+            while (i<= mid )
+            {
+                    sorted[k++] = IP[i++]; 
+             }
+            while (RI <= high)
+                {
+                    sorted[k++] = IP[RI++]; 
+                }
+            for (i = low; i <= high; i++)
+                {
+                    IP[i] = sorted[i];
+                }
+            }
+            //m_sort method 
 
-        
-       
+        }
     }
 }
